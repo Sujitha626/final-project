@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from './user';
+import {SearchUserComponent} from './search-user/search-user.component';
 @Injectable({
   providedIn: 'root'
 })
@@ -38,5 +39,4 @@ export class UserService {
   updateUser(id: number, user: User): Observable<Object> {
     return this.httpClient.put(`${this.baseURL}/${id}`, user);
   }
-
 }
